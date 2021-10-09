@@ -16,5 +16,5 @@ spec:
         backend:
           service:
             name: website-service
-              port:
-                number: 80
+            port:
+              number: 80
