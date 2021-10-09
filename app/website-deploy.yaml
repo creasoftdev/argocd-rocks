@@ -1,3 +1,5 @@
+# https://hub.docker.com/r/mendhak/http-https-echo
+# https://hub.docker.com/r/hashicorp/http-echo/
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +18,9 @@ spec:
     spec:
       containers:
       - name: argocdrocks-nginy
-        image: nginx:alpine
+        image: hashicorp/http-echo
+        args:
+        - -text="http-echo"
         ports:
         - containerPort: 80
         volumeMounts:
